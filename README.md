@@ -78,7 +78,8 @@ In your working project directory AND with your virtualenv activated, install Fl
 
 ## Implementation
 
-1. With ngrok downloaded and installed, run:
+### 1. Start ngrok
+With ngrok downloaded and installed, run:
 **On Windows**
 ```
 ngrok.exe http 8443
@@ -104,13 +105,19 @@ Connections          ttl     opn     rt1     rt5     p50     p90
 
 Record the ngrok url. In my example this is `8e4cbaf8.ngrok.io`
 
-2. Using the code from [python-telegram-starter-bot.py](https://github.com/amccook/python-telegram-starter-bot/blob/master/python-telegram-starter-bot.py), provide the required details for HOST and TOKEN. 
+### 2. Modify python-telegram-starter-bot
+Using the code from [python-telegram-starter-bot.py](https://github.com/amccook/python-telegram-starter-bot/blob/master/python-telegram-starter-bot.py), provide the required details for HOST and TOKEN. 
 
 Replace <YOUR NGROK URL> with your ngrok url. In my example, this would look like: `HOST = '8e4cbaf8.ngrok.io'`
 
 Replace <YOUR BOT TOKEN> with your Telegram Bot Token. In my example, this would look like: `123456789:AbCd3ef4GH6ijk8lmN5Opq5rSTUvwXYZZZZZ`
 
-3. Now run your bot.
+### 3. Start your bot
 ```
 # ./python-telegram-starter-bot.py
 ```
+### 4. Telegram
+In telegram start a conversation with your bot. From the code, you can see it has a response for /start and /help.
+
+### 5. Build your bot
+Using this framework, start adding more elif statements to handle different user input!
