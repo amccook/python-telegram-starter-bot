@@ -7,7 +7,7 @@ import telegram
 
 
 ## ngrok https tunnel
-HOST = '<your ngrok url>'   #ENTER YOUR NGROK URL HERE
+HOST = '<YOUR NGROK URL>'   #ENTER YOUR NGROK URL HERE
 PORT = 8443
 
 ## Telegram Bot Token
