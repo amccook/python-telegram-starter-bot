@@ -8,7 +8,6 @@ Please read through the prerequisites and installation instructions to get start
 ### Prerequisites
 These are the known prerequisites I used to get this bot up and running.
 
-```
 1. Python 2.7.x
 2. Telegram Bot
 3. ngrok
@@ -17,7 +16,7 @@ These are the known prerequisites I used to get this bot up and running.
     - Flask
     - python-telegram-bot
     - requests
-```
+
 ## Installation
 ### 1. Check python Version
 
