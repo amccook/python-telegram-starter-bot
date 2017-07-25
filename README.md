@@ -40,16 +40,7 @@ ngrok is useful if you don't have your own public HTTPS endpoint. Telegram needs
 
 You can [download ngrok here](https://ngrok.com/download).
 
-Once you've installed ngrok, you can run the following command to create a tunnel.
-
-**On Windows**
-```
-ngrok.exe http 8443
-```
-**On Linux**
-```
-./ngrok http 8443
-```
+We'll review ngrok later in the Implementation section.
 
 ### 4. Install Python Packages
 
@@ -85,3 +76,41 @@ In your working project directory AND with your virtualenv activated, install Fl
 # pip install requests
 ```
 
+## Implementation
+
+1. With ngrok downloaded and installed, run:
+**On Windows**
+```
+ngrok.exe http 8443
+```
+**On Linux**
+```
+./ngrok http 8443
+```
+Your tunnel will start and you will see a screen like this:
+```
+ngrok by @inconshreveable                              (Ctrl+C to quit)
+
+Session Status       online
+Version              2.2.8
+Region               United States (us)
+Web Interface        http://127.0.0.1:4040
+Forwarding           http://8e4cbaf8.ngrok.io -> localhost:8443
+Forwarding           https://8e4cbaf8.ngrok.io -> localhost:8443
+
+Connections          ttl     opn     rt1     rt5     p50     p90
+                     52      0       0.03    0.03    0.31    1.72
+```
+
+Record the ngrok url. In my example this is `8e4cbaf8.ngrok.io`
+
+2. Using the code from [python-telegram-starter-bot.py](https://github.com/amccook/python-telegram-starter-bot/blob/master/python-telegram-starter-bot.py), provide the required details for HOST and TOKEN. 
+
+Replace <YOUR NGROK URL> with your ngrok url. In my example, this would look like: `HOST = '8e4cbaf8.ngrok.io'`
+
+Replace <YOUR BOT TOKEN> with your Telegram Bot Token. In my example, this would look like: `123456789:AbCd3ef4GH6ijk8lmN5Opq5rSTUvwXYZZZZZ`
+
+3. Now run your bot.
+```
+# ./python-telegram-starter-bot.py
+```
